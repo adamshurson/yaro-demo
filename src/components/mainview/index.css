@@ -1,3 +1,10 @@
 .MainView button {
     transition: 0.2s all ease-in-out;
 }
+.MainView .Menu {
+    transition: 0.25s transform ease-in-out;
+    transform: translateY(-100%);
+}
+.MainView .Menu.open {
+    transform: translateY(0);
+}

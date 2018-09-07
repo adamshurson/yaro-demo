@@ -5,6 +5,9 @@ import LoginView from './components/loginview';
 import MainView from './components/mainview';
 import LoadingPearl from './pearls/loading';
 import AccountPearl from './pearls/account';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
 
 class App extends Component {
     constructor() {
