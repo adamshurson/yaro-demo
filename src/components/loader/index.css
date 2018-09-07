@@ -1,0 +1,47 @@
+.Loader {
+    -webkit-animation-fill-mode: forwards;
+    background-color: rgb(42, 40, 40);
+}
+.Loader.hidden {
+    animation: 1s fadeOut linear;
+    display: none;
+}
+.Loader .path {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+    animation: dash 2s linear infinite;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes dash {
+    0%, 100% {
+        stroke-dashoffset: 320px;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        fill: rgb(241,191,76);
+    }
+}
+@media (max-width: 767px) {
+    .Loader svg {
+        width: 50%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Loader svg {
+        width: 25%;
+    }
+}
+@media (min-width: 1025px) {
+    .Loader svg {
+        width: 10%;
+    }
+}

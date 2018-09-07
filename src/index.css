@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+body {
+  font-family: 'Noto Serif JP', sans-serif;
+  user-select: none;
+  cursor: default;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #EFC04B;
+  -webkit-box-shadow: unset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+*::-webkit-scrollbar {
+  width: 1em;
+}
+*::-webkit-scrollbar-track {
+  display: none;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #60C2AE;
+  outline: 1px solid #60C2AE;
+}
+*[class^='shadow'], *[class*=' shadow']{
+  transition: 0.2s box-shadow ease-in-out;
+}
