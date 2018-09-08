@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var config = require('./config');
 var User = require('./models/user');
-
+var cors = require('cors')
 var port = 5000;
 mongoose.connect(config.database);
 app.set('superSecret', config.secret);
@@ -19,10 +19,7 @@ app.use(function(req, res, next) {
     next();
 });
 app.use(morgan('dev'));
-
-app.get('/', function (req, res) {
-    res.send('Hello! The API is at http://localhost:' + port + '/api');
-});
+app.use(cors());
 app.get('/setup', function(req, res) {
     const adam = new User({
         name: 'Adam Shurson',
