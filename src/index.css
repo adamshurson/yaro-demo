@@ -3,6 +3,7 @@ body {
   font-family: 'Noto Serif JP', sans-serif;
   user-select: none;
   cursor: default;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;

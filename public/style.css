@@ -6352,6 +6352,7 @@ body {
       -ms-user-select: none;
           user-select: none;
   cursor: default;
+  scroll-behavior: smooth;
 }
 
 * {
