@@ -18,7 +18,7 @@ class Loader extends Component {
     }
     render() {
         return (
-            <div className={ (this.state.shouldDisplay ? "" : "hidden") + " Loader absolute pin flex justify-center items-center bg-brown"}>
+            <div className={ (this.state.shouldDisplay ? "" : "hidden") + " Loader fixed z-20 pin flex justify-center items-center bg-brown"}>
                 <Logo />
             </div>
         );

@@ -14,26 +14,33 @@ class AccountPearl extends Pearl {
         });
     }
     login(username, password) {
-        this.LoadingPearl.setState({ isLoading: true});
-        axios.post('http://localhost:8080/authenticate', {
-            name: username,
-            password: password
-        })
-        .then((response) => {
-            setTimeout(() => {
-                this.setState({
-                    isLoggedIn: true,
-                    firstName: "Adam",
-                    lastName: "Shurson",
-                    username: "ashurson",
-                    token: response.data.token
-                });
-                this.LoadingPearl.setState({ isLoading: false});
-            }, 500);
-        })
-        .catch((error) => {
-            console.log(error);
-            this.LoadingPearl.setState({ isLoading: false});
+        // this.LoadingPearl.setState({ isLoading: true});
+        // axios.post('http://localhost:8080/authenticate', {
+        //     name: username,
+        //     password: password
+        // })
+        // .then((response) => {
+        //     setTimeout(() => {
+        //         this.setState({
+        //             isLoggedIn: true,
+        //             firstName: "Adam",
+        //             lastName: "Shurson",
+        //             username: "ashurson",
+        //             token: response.data.token
+        //         });
+        //         this.LoadingPearl.setState({ isLoading: false});
+        //     }, 500);
+        // })
+        // .catch((error) => {
+        //     console.log(error);
+        //     this.LoadingPearl.setState({ isLoading: false});
+        // });
+        this.setState({
+            isLoggedIn: true,
+            firstName: "Adam",
+            lastName: "Shurson",
+            username: "ashurson",
+            token: "test"
         });
     }
 }

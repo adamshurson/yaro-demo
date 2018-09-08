@@ -35,7 +35,7 @@ class App extends Component {
     }
     render() {
         return (
-            <div className="App bg-grey-lightest">
+            <div className="App bg-grey-lightest w-screen h-screen fixed overflow-hidden">
                 <Loader/>
                 { this.state.account.isLoggedIn
                     ? <MainView/>

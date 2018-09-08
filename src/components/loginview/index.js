@@ -33,13 +33,13 @@ class LoginView extends Component {
     }
     render() {
         return (
-            <div className="LoginView flex flex-col min-h-screen justify-center items-center bg-grey-lightest">
+            <div className="LoginView flex flex-col h-full justify-center items-center bg-grey-lightest">
                 <h1 className={"py-8 text-teal"}>Yaro</h1>
                 <input value={this.state.username} onChange={(evt) => this.setUsername(evt)} type={"text"} className={"px-4 py-2 bg-transparent text-teal my-2 rounded border-2 border-teal focus:outline-none"} autoComplete="new-password"/>
                 <input value={this.state.password} onChange={(evt) => this.setPassword(evt)} type={"password"} className={"px-4 py-2 bg-transparent text-teal my-2 rounded border-2 border-teal focus:outline-none"} autoComplete="new-password"/>
                 <div className={"flex my-4"}>
-                    <button className={"focus:outline-none text-teal"} >Register</button>
-                    <button onClick={() => this.login()} className={"focus:outline-none text-teal ml-8"} >Log In</button>
+                    <button className={"focus:outline-none text-teal px-4 py-2"} >Register</button>
+                    <button onClick={() => this.login()} className={"focus:outline-none text-teal ml-8 px-4 py-2"} >Log In</button>
                 </div>
             </div>
         );

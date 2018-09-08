@@ -6395,6 +6395,11 @@ select:-webkit-autofill:focus {
   transition: .2s color ease-in-out;
 }
 
+.h-screen {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
 .Loader {
   -webkit-animation-fill-mode: forwards;
   background-color: rgb(42, 40, 40);
