@@ -15,7 +15,7 @@ class AccountPearl extends Pearl {
     }
     login(username, password) {
         this.LoadingPearl.setState({ isLoading: true});
-        axios.post('http://http://localhost/api/authenticate', {
+        axios.post('http://167.99.107.141/api/authenticate', {
             name: username,
             password: password
         })
