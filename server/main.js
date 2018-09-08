@@ -7,7 +7,7 @@ var jwt = require('jsonwebtoken');
 var config = require('./config');
 var User = require('./models/user');
 
-var port = 8080;
+var port = 5000;
 mongoose.connect(config.database);
 app.set('superSecret', config.secret);
 
