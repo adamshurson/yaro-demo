@@ -6357,6 +6357,7 @@ body {
 
 * {
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 input:-webkit-autofill,
@@ -6496,8 +6497,8 @@ select:-webkit-autofill:focus {
 }
 
 .MainView .Menu.open {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(71px);
+          transform: translateY(71px);
 }
 
 @media (min-width: 576px) {

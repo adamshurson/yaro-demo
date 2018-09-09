@@ -35,13 +35,6 @@ class AccountPearl extends Pearl {
             console.log(error);
             this.LoadingPearl.setState({ isLoading: false});
         });
-        this.setState({
-            isLoggedIn: true,
-            firstName: "Adam",
-            lastName: "Shurson",
-            username: "ashurson",
-            token: "test"
-        });
     }
 }
 export default AccountPearl;
