@@ -6,5 +6,5 @@
     transform: translateY(-100%);
 }
 .MainView .Menu.open {
-    transform: translateY(0);
+    transform: translateY(71px);
 }
