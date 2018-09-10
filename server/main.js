@@ -11,6 +11,8 @@ const port = 5000;
 // require routes
 const route_auth = require('./routes/auth');
 const route_stored_procedures = require('./routes/stored_procedure');
+const route_doctors = require('./routes/doctors');
+const route_visits = require('./routes/visits');
 
 // connect to db
 mongoose.connect(config.database);
@@ -33,6 +35,8 @@ app.use(cors());
 // map urls to route handlers
 app.use('/auth', route_auth);
 app.use('/stored_procedures', route_stored_procedures);
+app.use('/doctors', route_doctors);
+app.use('/visits', route_visits);
 
 // start app
 app.listen(port);

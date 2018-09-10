@@ -4,6 +4,7 @@ import Detail from "../detail";
 import Logo from "../logo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import StoredProcedures from "../storedprocedures";
+import Visits from "../visits";
 
 class MainView extends Component {
     constructor() {
@@ -22,6 +23,11 @@ class MainView extends Component {
             'messages': {
                 title: 'Messages',
                 component: <div>test 2</div>,
+                isRoot: true
+            },
+            'visits': {
+                title: 'Visits',
+                component: <Visits/>,
                 isRoot: true
             },
             'stored_procedures': {

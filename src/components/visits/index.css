@@ -1,0 +1,6 @@
+.Visit .VisitOverlay {
+    display: none;
+}
+.Visit:hover .VisitOverlay {
+    display: flex;
+}

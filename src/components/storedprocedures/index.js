@@ -8,7 +8,6 @@ class StoredProcedures extends Component {
         super(props);
         this.props = props;
         this.state = {
-            currentProcedure: null,
             procedures: [],
             isAddingProcedure: false,
             isEditingProcedure: false,

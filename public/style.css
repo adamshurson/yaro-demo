@@ -6517,6 +6517,14 @@ select:-webkit-autofill:focus {
   background-color: rgba(0, 0, 0, .6);
 }
 
+.Visit .VisitOverlay {
+  display: none;
+}
+
+.Visit:hover .VisitOverlay {
+  display: flex;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
