@@ -30,7 +30,7 @@ class UnauthorizedView extends Component {
     }
     render() {
         return (
-            <div className="UnauthorizedView">
+            <div className="UnauthorizedView absolute pin flex items-center justify-center">
                 {this.state.view.component}
             </div>
         );
