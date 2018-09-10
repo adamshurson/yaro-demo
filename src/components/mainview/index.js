@@ -47,7 +47,7 @@ class MainView extends Component {
     componentDidMount() {
         this.ScrollPearl.subscribe((newState) => {
             this.setState({
-                canScrollMain: newState
+                canScrollMain: newState.isAllowed
             });
         });
     }
@@ -59,6 +59,7 @@ class MainView extends Component {
         this.ScrollPearl.allowScroll();
     }
     toggleMenu() {
+        // if menu is going to be open, prevent scroll
         if (!this.state.menuOpen) {
             this.ScrollPearl.preventScroll();
         } else {
@@ -91,7 +92,7 @@ class MainView extends Component {
                     </div>
                 </div>
                 <div className={"overflow-hidden flex-1"}>
-                    <div className={(this.state.canScrollMain ? "overflow-y-hidden" : "overflow-y-scroll") + " p-4 w-full h-full relative"}>
+                    <div className={(this.state.canScrollMain ? "overflow-y-scroll" : "overflow-y-hidden") + " p-4 w-full h-full relative"}>
                         {this.pages[this.state.activePage].component}
                     </div>
                 </div>
