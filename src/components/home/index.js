@@ -40,7 +40,7 @@ class Home extends Component {
     }
     calculateCost(visit) {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
-    }z
+    }
     render() {
         const options = {
             title: {
@@ -52,14 +52,16 @@ class Home extends Component {
         };
         const AnyReactComponent = ({ text }) => <div>{text}</div>;
         return (
-            <div className="Home">
-                <div className={"shadow-md hover:shadow-lg rounded overflow-hidden"}>
-                    <HighchartsReact
-                        highcharts={Highcharts}
-                        options={options}
-                    />
+            <div className="Home flex flex-col">
+                <div className="p-4">
+                    <div className="shadow-md hover:shadow-lg rounded overflow-hidden">
+                        <HighchartsReact
+                            highcharts={Highcharts}
+                            options={options}
+                        />
+                    </div>
                 </div>
-                <div className="flex flex-wrap mt-2">
+                <div className="flex flex-wrap">
                     {
                         this.state.visits.map((visit) => {
                             return <div key={visit._id} className={"flex w-full lg:w-1/2 xl:w-1/3 p-4"}>

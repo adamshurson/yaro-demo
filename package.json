@@ -28,7 +28,7 @@
     "react-scripts": "1.1.5"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"react-scripts start\" \"nodemon server/main.js\"",
+    "start": "concurrently --kill-others \"react-scripts start\" \"nodemon server/main.js\" \"gulp\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test-backend": "isTestEnv='true' mocha --exit",

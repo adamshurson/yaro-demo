@@ -41,7 +41,7 @@ class Detail extends Component {
         const AnyReactComponent = ({ text }) => <div>{text}</div>;
         const procedureItems = this.renderProcedureItems();
         return (
-            <div className="Detail flex flex-col text-teal">
+            <div className="Detail flex flex-col text-teal p-4">
                 <div className={"flex flex-wrap"}>
                     <div className={"flex flex-col w-full lg:w-1/2 lg:pr-4 mb-4 lg:mb-0"}>
                         <div className={"px-4 py-2 bg-white rounded shadow-md hover:shadow-lg mb-4"}>

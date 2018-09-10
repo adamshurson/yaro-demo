@@ -91,10 +91,13 @@ class Visit extends Component {
     }
     render() {
         return (
-            <div className="Visits flex flex-wrap">
-                <div onClick={() => {this.setState({isAddingVisit: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal w-full mb-4 cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
-                    Add Visit
+            <div className="Visits flex flex-col">
+                <div className="p-4">
+                    <div onClick={() => {this.setState({isAddingVisit: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
+                        Add Visit
+                    </div>
                 </div>
+                <div className="flex flex-wrap">
                 {
                     this.state.visits.map((visit) => {
                         return <div key={visit._id} className={"w-full md:w-1/2 lg:w-1/3 p-4"}>
@@ -115,6 +118,7 @@ class Visit extends Component {
                         </div>
                     })
                 }
+                </div>
                 { this.state.isAddingVisit
                     ? <AddVisit addVisit={(visit) => this.addVisit(visit)} exitAddingVisit={() => this.exitAddingVisit()}/>
                     : null

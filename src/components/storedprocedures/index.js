@@ -90,10 +90,13 @@ class StoredProcedures extends Component {
     }
     render() {
         return (
-            <div className="StoredProcedures flex flex-wrap">
-                <div onClick={() => {this.setState({isAddingProcedure: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal w-full mb-4 cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
-                    Add Procedure
+            <div className="StoredProcedures flex flex-col">
+                <div className="p-4">
+                    <div onClick={() => {this.setState({isAddingProcedure: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
+                        Add Procedure
+                    </div>
                 </div>
+                <div className="flex flex-wrap">
                 {
                     this.state.procedures.map((procedure) => {
                         return <div key={procedure._id} className={"w-full md:w-1/2 lg:w-1/3 p-4"}>
@@ -111,6 +114,7 @@ class StoredProcedures extends Component {
                         </div>
                     })
                 }
+                </div>
                 { this.state.isAddingProcedure
                     ? <AddStoredProcedure addProcedure={(procedure) => this.addProcedure(procedure)} exitAddingProcedure={() => this.exitAddingProcedure()}/>
                     : null
