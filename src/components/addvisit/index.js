@@ -108,7 +108,7 @@ class AddStoredProcedure extends Component {
     }
     render() {
         return (
-            <div className="AddVisit flex items-center justify-center shadow-lg fixed pin bg-opaque z-30">
+            <div className="AddVisit flex items-center justify-center shadow-lg absolute pin bg-opaque z-30">
                 <div className="absolute pin rounded bg-white flex flex-col p-4 m-4 md:m-12 lg:m-24">
                     <div className="flex items-center pb-4">
                         <h4>Create a Visit</h4>

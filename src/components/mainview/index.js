@@ -5,6 +5,7 @@ import Logo from "../logo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import StoredProcedures from "../storedprocedures";
 import Visits from "../visits";
+import ScrollPearl from '../../pearls/scroll';
 
 class MainView extends Component {
     constructor() {
@@ -36,18 +37,33 @@ class MainView extends Component {
                 isRoot: true
             }
         };
+        this.ScrollPearl = new ScrollPearl();
         this.state = {
             activePage: 'home',
-            menuOpen: false
+            menuOpen: false,
+            canScrollMain: true
         };
+    }
+    componentDidMount() {
+        this.ScrollPearl.subscribe((newState) => {
+            this.setState({
+                canScrollMain: newState
+            });
+        });
     }
     setPage(page) {
         this.setState({
             activePage: page,
             menuOpen: false
         });
+        this.ScrollPearl.allowScroll();
     }
     toggleMenu() {
+        if (!this.state.menuOpen) {
+            this.ScrollPearl.preventScroll();
+        } else {
+            this.ScrollPearl.allowScroll();
+        }
         this.setState({
             menuOpen: !this.state.menuOpen
         });
@@ -75,7 +91,7 @@ class MainView extends Component {
                     </div>
                 </div>
                 <div className={"overflow-hidden flex-1"}>
-                    <div className={(this.state.menuOpen ? "overflow-y-hidden" : "overflow-y-scroll") + " p-4 pb-32 md:pb-4 w-full h-full"}>
+                    <div className={(this.state.canScrollMain ? "overflow-y-hidden" : "overflow-y-scroll") + " p-4 w-full h-full relative"}>
                         {this.pages[this.state.activePage].component}
                     </div>
                 </div>

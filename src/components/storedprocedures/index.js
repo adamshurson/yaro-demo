@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import AddStoredProcedure from "../addstoredprocedure";
 import EditingStoredProcedure from "../editingstoredprocedure";
+import ScrollPearl from '../../pearls/scroll';
 
 class StoredProcedures extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class StoredProcedures extends Component {
             isEditingProcedure: false,
             procedure: null
         };
+        this.ScrollPearl = new ScrollPearl();
         // check if production or not
         if (window.location.href === 'http://localhost:3000/') {
             this.rootUrl = 'http://localhost:5000/stored_procedures';
@@ -77,17 +79,19 @@ class StoredProcedures extends Component {
         this.setState({
             isAddingProcedure: false
         });
+        this.ScrollPearl.allowScroll();
     }
     exitEditingProcedure() {
         this.setState({
             isEditingProcedure: false,
             procedure: null
         });
+        this.ScrollPearl.allowScroll();
     }
     render() {
         return (
             <div className="StoredProcedures flex flex-wrap">
-                <div onClick={() => this.setState({isAddingProcedure: true})} className={"bg-white text-teal w-full mb-4 cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
+                <div onClick={() => {this.setState({isAddingProcedure: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal w-full mb-4 cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
                     Add Procedure
                 </div>
                 {

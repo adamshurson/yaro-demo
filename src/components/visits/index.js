@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AddVisit from "../addvisit";
+import ScrollPearl from '../../pearls/scroll';
 
 class Visit extends Component {
     constructor() {
@@ -11,6 +12,7 @@ class Visit extends Component {
             isEditingVisit: false,
             visit: null
         };
+        this.ScrollPearl = new ScrollPearl();
         // check if production or not
         if (window.location.href === 'http://localhost:3000/') {
             this.rootUrl = 'http://localhost:5000/visits';
@@ -75,12 +77,14 @@ class Visit extends Component {
         this.setState({
             isAddingVisit: false
         });
+        this.ScrollPearl.allowScroll();
     }
     exitEditingVisit() {
         this.setState({
             isEditingVisit: false,
             visit: null
         });
+        this.ScrollPearl.allowScroll();
     }
     calculateCost(visit) {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
@@ -88,7 +92,7 @@ class Visit extends Component {
     render() {
         return (
             <div className="Visits flex flex-wrap">
-                <div onClick={() => this.setState({isAddingVisit: true})} className={"bg-white text-teal w-full mb-4 cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
+                <div onClick={() => {this.setState({isAddingVisit: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal w-full mb-4 cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
                     Add Visit
                 </div>
                 {
