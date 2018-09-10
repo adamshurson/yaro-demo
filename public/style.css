@@ -6357,7 +6357,18 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.overflow-auto,
+.overflow-scroll,
+.overflow-y-auto,
+.overflow-y-scroll {
   -webkit-overflow-scrolling: touch;
+}
+
+.overflow-hidden,
+.overflow-y-hidden {
+  -webkit-overflow-scrolling: unset;
 }
 
 input:-webkit-autofill,
