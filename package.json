@@ -31,7 +31,8 @@
     "start": "concurrently --kill-others \"react-scripts start\" \"nodemon server/main.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "test-backend": "mocha --exit",
+    "test-backend": "isTestEnv='true' mocha --exit",
+    "test-backend-windows": "set isTestEnv='true' && mocha --exit",
     "eject": "react-scripts eject"
   },
   "devDependencies": {

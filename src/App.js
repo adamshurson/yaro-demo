@@ -13,26 +13,12 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            account: {},
-            isFocused: false
+            account: {}
         };
         this.AccountPearl = new AccountPearl();
         this.LoadingPearl = new LoadingPearl();
         this.LoadingPearl.setState({
             isLoading: true
-        });
-        document.addEventListener('focusin', (evt) => {
-            if(evt.target.tagName === 'INPUT') {
-                this.setState({
-                    isFocused: true
-                });
-                window.scrollTo(0,document.body.scrollHeight);
-            }
-        });
-        document.addEventListener('focusout', (evt) => {
-            this.setState({
-                isFocused: false
-            });
         });
     }
     componentDidMount() {
@@ -49,7 +35,7 @@ class App extends Component {
     }
     render() {
         return (
-            <div className={(this.state.isFocused ? "absolute": "fixed") + " App bg-grey-lightest w-screen h-screen overflow-hidden"}>
+            <div className={"absolute App bg-grey-lightest pin overflow-hidden"}>
                 <Loader/>
                 { this.state.account.isLoggedIn
                     ? <MainView/>

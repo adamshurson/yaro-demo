@@ -74,8 +74,10 @@ class MainView extends Component {
                         }
                     </div>
                 </div>
-                <div className={(this.state.menuOpen ? "overflow-y-hidden" : "overflow-y-scroll") + " flex-1 p-4 pb-32 md:pb-4"}>
-                    {this.pages[this.state.activePage].component}
+                <div className={"overflow-hidden flex-1"}>
+                    <div className={(this.state.menuOpen ? "overflow-y-hidden" : "overflow-y-scroll") + " p-4 pb-32 md:pb-4 w-full h-full"}>
+                        {this.pages[this.state.activePage].component}
+                    </div>
                 </div>
             </div>
         );
