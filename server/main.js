@@ -8,6 +8,9 @@ const config = require('./config');
 const cors = require('cors');
 const port = 5000;
 
+// check if test environment
+const isTestEnv = process.env.isTestEnv || false;
+
 // require routes
 const route_auth = require('./routes/auth');
 const route_stored_procedures = require('./routes/stored_procedure');
@@ -15,13 +18,20 @@ const route_doctors = require('./routes/doctors');
 const route_visits = require('./routes/visits');
 
 // connect to db
-mongoose.connect(config.database);
+const dbUrl = (isTestEnv ? config.testDatabase : config.database);
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true
+})
+.catch(function(err) {
+    console.log(err);
+});
 
 // use body parser and allow CORS
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -41,3 +51,5 @@ app.use('/visits', route_visits);
 // start app
 app.listen(port);
 console.log('Server running on port:' + port);
+
+module.exports = app;

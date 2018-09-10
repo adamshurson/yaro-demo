@@ -1,13 +1,15 @@
 module.exports = {
     validateBody: function(body, requiredArgs) {
+        let noMissingParams = true;
         // check all required args exist in the body
         requiredArgs.map((arg) => {
             if (!body.hasOwnProperty(arg)) {
-                return false;
+                noMissingParams = false;
+            } else if (body[arg] === null || undefined) {
+                noMissingParams = false;
             }
         });
-        //if all are in body, then return true
-        return true;
+        return noMissingParams;
     },
     userHasToken: function(req, callback) {
         const token = req.body.token;

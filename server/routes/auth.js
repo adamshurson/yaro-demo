@@ -86,8 +86,8 @@ login = function(username, password, res) {
                 return res.status(200).json({success: false, err: "Incorrect password"});
             } else {
                 // remove sensitive info
-                const userObject = JSON.stringify(user);
-                delete userObject.password;
+                const userObject = user;
+                userObject.password = null;
 
                 // set new token
                 const token = jwt.sign(JSON.stringify(userObject), config.secret);
