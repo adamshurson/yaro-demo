@@ -5,8 +5,14 @@ import LoadingPearl from "../loading";
 class AccountPearl extends Pearl {
     init() {
         this.LoadingPearl = new LoadingPearl();
-        // this.rootUrl = 'http://167.99.107.141/api/auth';
-        this.rootUrl = 'http://localhost:5000/auth';
+
+        // check if production or not
+        if (window.location.href === 'http://localhost:3000/') {
+            this.rootUrl = 'http://localhost:5000/auth';
+        } else {
+            this.rootUrl = 'http://167.99.107.141/api/auth';
+        }
+
         this.setState({
             isLoggedIn: false,
             firstName: null,
