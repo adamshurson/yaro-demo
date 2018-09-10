@@ -14,31 +14,7 @@ router.post('/login', function(req, res) {
         "password"
     ];
     if (validator.validateBody(req.body, required)) {
-        User.findOne({
-            username: req.body.username
-        }, function(err, user) {
-            if (err) {
-                return res.status(500).json({err: err});
-            } else if (!user) {
-                return res.status(200).json({ success: false, err: "User not found"});
-            } else if (user) {
-                // hash request password to see if matches db password
-                const encrypted = saltHashPassword(req.body.password, user.password.salt);
-                if (user.password.hash !== encrypted.hash || user.password.salt !== encrypted.salt) {
-                    return res.status(200).json({ success: false, err: "Incorrect password"});
-                } else {
-                    // happy path, return user with new token
-                    const token = jwt.sign(JSON.stringify(user), config.secret);
-
-                    // return the information including token as JSON
-                    return res.status(200).json({
-                        success: true,
-                        token: token
-                    });
-                }
-            }
-
-        });
+        login(req.body.username, req.body.password, res);
     } else {
         return res.status(400).json({success: false, err: "Username and Password required"});
     }
@@ -75,7 +51,7 @@ router.post('/register', function(req, res) {
                    if (err) {
                        return res.status(200).json({success: false, err: err});
                    } else {
-                       return res.status(200).json({success: true, user: user});
+                       login(user.username, user.password, res);
                    }
                 });
             } else {
@@ -87,6 +63,46 @@ router.post('/register', function(req, res) {
     }
 });
 
+login = function(username, password, res) {
+    User.findOne({
+        username: username
+    }, function(err, user) {
+        if (err) {
+            return res.status(500).json({err: err});
+        } else if (!user) {
+            return res.status(200).json({ success: false, err: "User not found"});
+        } else if (user) {
+            let comparison = null;
+
+            // check if user is logging in or returning from registering
+            if (password.salt) {
+                comparison = password;
+            } else {
+                comparison = saltHashPassword(password, user.password.salt);
+            }
+
+            // compare hashes
+            if (user.password.hash !== comparison.hash || user.password.salt !== comparison.salt) {
+                return res.status(200).json({ success: false, err: "Incorrect password"});
+            } else {
+                // remove sensitive info
+                const userObject = JSON.stringify(user);
+                delete userObject.password;
+
+                // set new token
+                const token = jwt.sign(JSON.stringify(userObject), config.secret);
+
+                // return the information including token as JSON
+                return res.status(200).json({
+                    success: true,
+                    userObject: userObject,
+                    token: token
+                });
+            }
+        }
+
+    });
+};
 genRandomString = function(length) {
     return crypto.randomBytes(Math.ceil(length/2)).toString('hex').slice(0,length);
 };

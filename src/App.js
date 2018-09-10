@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './index.css';
 import Loader from './components/loader';
-import LoginView from './components/loginview';
+import UnauthorizedView from './components/unauthorizedview';
 import MainView from './components/mainview';
 import LoadingPearl from './pearls/loading';
 import AccountPearl from './pearls/account';
@@ -53,7 +53,7 @@ class App extends Component {
                 <Loader/>
                 { this.state.account.isLoggedIn
                     ? <MainView/>
-                    : <LoginView/>
+                    : <UnauthorizedView/>
                 }
             </div>
         );
