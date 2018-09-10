@@ -3,6 +3,8 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import GoogleMapReact from 'google-map-react';
 import axios from "axios";
+import VisitMap from "../VisitMap";
+import {Map} from "google-maps-react";
 
 class Home extends Component {
     constructor(props) {
@@ -53,12 +55,19 @@ class Home extends Component {
         const AnyReactComponent = ({ text }) => <div>{text}</div>;
         return (
             <div className="Home flex flex-col">
-                <div className="p-4">
-                    <div className="shadow-md hover:shadow-lg rounded overflow-hidden">
-                        <HighchartsReact
-                            highcharts={Highcharts}
-                            options={options}
-                        />
+                <div className="flex flex-wrap">
+                    <div className="p-4 w-full lg:w-1/2">
+                        <div className="shadow-md hover:shadow-lg rounded overflow-hidden">
+                            <HighchartsReact
+                                highcharts={Highcharts}
+                                options={options}
+                            />
+                        </div>
+                    </div>
+                    <div className="p-4 w-full lg:w-1/2">
+                        <div style={{"height": "40vh"}} className="shadow-md hover:shadow-lg rounded overflow-hidden relative">
+                            <VisitMap visits={this.state.visits}/>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-wrap">
@@ -88,7 +97,7 @@ class Home extends Component {
                                             <AnyReactComponent
                                                 lat={visit.location.lat}
                                                 lng={visit.location.lon}
-                                                text={'Office'}
+                                                text={visit.doctor.profile.first_name + " " + visit.doctor.profile.last_name}
                                             />
                                         </GoogleMapReact>
                                     </div>

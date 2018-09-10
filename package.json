@@ -15,6 +15,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "google-map-react": "^1.0.6",
+    "google-maps-react": "^2.0.2",
     "gulp": "^3.9.1",
     "highcharts": "^6.1.2",
     "highcharts-react-official": "^1.4.0",
