@@ -68,7 +68,7 @@ login = function(username, password, res) {
         username: username
     }, function(err, user) {
         if (err) {
-            return res.status(500).json({err: err});
+            return res.status(500).json({success: false, err: err});
         } else if (!user) {
             return res.status(200).json({ success: false, err: "User not found"});
         } else if (user) {
@@ -83,7 +83,7 @@ login = function(username, password, res) {
 
             // compare hashes
             if (user.password.hash !== comparison.hash || user.password.salt !== comparison.salt) {
-                return res.status(200).json({ success: false, err: "Incorrect password"});
+                return res.status(200).json({success: false, err: "Incorrect password"});
             } else {
                 // remove sensitive info
                 const userObject = JSON.stringify(user);

@@ -6505,6 +6505,18 @@ select:-webkit-autofill:focus {
           transform: translateY(71px);
 }
 
+.Procedure .ProcedureOverlay {
+  display: none;
+}
+
+.Procedure:hover .ProcedureOverlay {
+  display: flex;
+}
+
+.bg-opaque-dark {
+  background-color: rgba(0, 0, 0, .6);
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

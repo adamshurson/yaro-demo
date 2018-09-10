@@ -1,0 +1,9 @@
+.Procedure .ProcedureOverlay {
+    display: none;
+}
+.Procedure:hover .ProcedureOverlay {
+    display: flex;
+}
+.bg-opaque-dark {
+    background-color: rgba(0,0,0,0.6);
+}
