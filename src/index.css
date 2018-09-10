@@ -42,3 +42,6 @@ select:-webkit-autofill:focus {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
+.bg-opaque {
+  background-color: rgba(0,0,0,0.4);
+}

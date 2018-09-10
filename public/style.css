@@ -6402,6 +6402,10 @@ select:-webkit-autofill:focus {
   height: calc(var(--vh, 1vh) * 100);
 }
 
+.bg-opaque {
+  background-color: rgba(0, 0, 0, .4);
+}
+
 .Loader {
   -webkit-animation-fill-mode: forwards;
   background-color: rgb(42, 40, 40);
