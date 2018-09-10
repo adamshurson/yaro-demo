@@ -6360,11 +6360,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.overflow-hidden,
-.overflow-y-hidden {
-  -webkit-overflow-scrolling: unset;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
