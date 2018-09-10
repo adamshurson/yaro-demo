@@ -13,26 +13,29 @@ class AccountPearl extends Pearl {
             token: null
         });
     }
-    login(username, password) {
+    login(username, password, fallback) {
         this.LoadingPearl.setState({ isLoading: true});
-        axios.post('http://167.99.107.141/api/authenticate', {
-            name: username,
+        // axios.post('http://167.99.107.141/api/authenticate', {
+        axios.post('http://localhost:5000/auth/login', {
+            username: username,
             password: password
         })
         .then((response) => {
-            setTimeout(() => {
+            if (response.data.success) {
                 this.setState({
                     isLoggedIn: true,
-                    firstName: "Adam",
-                    lastName: "Shurson",
-                    username: "ashurson",
+                    firstName: response.data.first_name,
+                    lastName: response.data.last_name,
+                    username: response.data.username,
                     token: response.data.token
                 });
-                this.LoadingPearl.setState({ isLoading: false});
-            }, 500);
+            } else {
+               fallback(response.data.err);
+            }
+            this.LoadingPearl.setState({ isLoading: false});
         })
         .catch((error) => {
-            console.log(error);
+            console.log("Unexpected error: " + error);
             this.LoadingPearl.setState({ isLoading: false});
         });
     }

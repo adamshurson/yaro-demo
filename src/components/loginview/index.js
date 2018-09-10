@@ -7,7 +7,8 @@ class LoginView extends Component {
         this.state = {
             account: {},
             username: "",
-            password: ""
+            password: "",
+            err: ""
         };
         this.AccountPearl = new AccountPearl();
     }
@@ -19,7 +20,11 @@ class LoginView extends Component {
         });
     }
     login() {
-        this.AccountPearl.login(this.state.username, this.state.password);
+        this.AccountPearl.login(this.state.username, this.state.password, (errorMessage) => {
+            this.setState({
+                err: errorMessage
+            });
+        });
     }
     setUsername(evt) {
         this.setState({
@@ -35,6 +40,7 @@ class LoginView extends Component {
         return (
             <div className="LoginView flex flex-col h-full justify-center items-center bg-grey-lightest">
                 <h1 className={"py-8 text-teal"}>Yaro</h1>
+                <p className={(this.state.err.length > 0 ? "pb-4 text-red" : "hidden")}>{this.state.err}</p>
                 <input autoFocus={true} value={this.state.username} onChange={(evt) => this.setUsername(evt)} type={"text"} className={"px-4 py-2 bg-transparent text-teal my-2 rounded border-2 border-teal focus:outline-none"} autoComplete="new-password"/>
                 <input value={this.state.password} onChange={(evt) => this.setPassword(evt)} type={"password"} className={"px-4 py-2 bg-transparent text-teal my-2 rounded border-2 border-teal focus:outline-none"} autoComplete="new-password"/>
                 <div className={"flex my-4"}>
