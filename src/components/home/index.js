@@ -3,6 +3,7 @@ import axios from "axios";
 import VisitMap from "../visitmap/index";
 import GoogleMapReact from 'google-map-react';
 import Spending from "../spending";
+import VisitPearl from '../../pearls/visit';
 
 class Home extends Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class Home extends Component {
         this.state = {
             visits: []
         };
+        this.VisitPearl = new VisitPearl();
         // check if production or not
         if (window.location.href === 'http://localhost:3000/') {
             this.rootUrl = 'http://localhost:5000';
@@ -36,6 +38,12 @@ class Home extends Component {
     calculateCost(visit) {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
     }
+    toVisit(visit) {
+        this.VisitPearl.setState({
+            visit: visit
+        });
+        this.props.setPage('detail');
+    }
     render() {
         const Title = ({ text }) => <div className="text-white p-4 min-w-fit whitespace-no-wrap bg-opaque-dark rounded-full">{text}</div>;
         return (
@@ -57,7 +65,7 @@ class Home extends Component {
                         this.state.visits.map((visit) => {
                             return <div key={visit._id} className={"flex w-full lg:w-1/2 xl:w-1/3 p-4"}>
                                 <div className={"flex w-full bg-white items-center shadow-md hover:shadow-lg text-teal"}>
-                                    <div onClick={() => this.props.setPage('detail')} className={"flex flex-1 px-4 flex-col cursor-pointer"}>
+                                    <div onClick={() => this.toVisit(visit)} className={"flex flex-1 px-4 flex-col cursor-pointer"}>
                                         <div className={"pb-2 flex"}>
                                             <h5 className={"font-normal"}>{(new Date(visit.date)).toLocaleDateString()}</h5>
                                             <h5 className={"font-normal ml-auto"}>${this.calculateCost(visit)}</h5>
