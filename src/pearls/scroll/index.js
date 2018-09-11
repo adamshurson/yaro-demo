@@ -1,9 +1,11 @@
 import Pearl from '@ashurson/pearl';
 
 class ScrollPearl extends Pearl {
-    init() {
-        this.setState({
-            isAllowed: true
+    constructor() {
+        super('ScrollPearl', function() {
+            this.state = {
+                isAllowed: true
+            };
         });
     }
     preventScroll() {

@@ -15,11 +15,6 @@ class App extends Component {
         this.state = {
             account: {}
         };
-        this.AccountPearl = new AccountPearl();
-        this.LoadingPearl = new LoadingPearl();
-        this.LoadingPearl.setState({
-            isLoading: true
-        });
     }
     componentDidMount() {
         setTimeout(() => {
@@ -27,6 +22,12 @@ class App extends Component {
                 isLoading: false
             });
         }, 2000);
+        this.AccountPearl = new AccountPearl();
+        console.log(this.AccountPearl);
+        this.LoadingPearl = new LoadingPearl();
+        this.LoadingPearl.setState({
+            isLoading: true
+        });
         this.AccountPearl.subscribe( (newState) => {
            this.setState({
                account: newState

@@ -15,6 +15,8 @@ class RegisterView extends Component {
             birth_date: "",
             err: ""
         };
+    }
+    componentDidMount() {
         this.AccountPearl = new AccountPearl();
     }
     register() {

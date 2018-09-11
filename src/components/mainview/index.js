@@ -37,7 +37,6 @@ class MainView extends Component {
                 isRoot: true
             }
         };
-        this.ScrollPearl = new ScrollPearl();
         this.state = {
             activePage: 'home',
             menuOpen: false,
@@ -45,25 +44,35 @@ class MainView extends Component {
         };
     }
     componentDidMount() {
+        this.ScrollPearl = new ScrollPearl();
         this.ScrollPearl.subscribe((newState) => {
             this.setState({
                 canScrollMain: newState.isAllowed
             });
         });
+        console.log(global.window.ScrollPearl);
+        console.log(window.ScrollPearl);
+        console.log(this.ScrollPearl);
     }
     setPage(page) {
         this.setState({
             activePage: page,
             menuOpen: false
         });
-        this.ScrollPearl.allowScroll();
+        this.ScrollPearl.setState({
+            isAllowed: true
+        });
     }
     toggleMenu() {
         // if menu is going to be open, prevent scroll
         if (!this.state.menuOpen) {
-            this.ScrollPearl.preventScroll();
+            this.ScrollPearl.setState({
+                isAllowed: false
+            });
         } else {
-            this.ScrollPearl.allowScroll();
+            this.ScrollPearl.setState({
+                isAllowed: true
+            });
         }
         this.setState({
             menuOpen: !this.state.menuOpen

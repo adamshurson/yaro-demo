@@ -9,6 +9,8 @@ class LoginView extends Component {
             password: "",
             err: ""
         };
+    }
+    componentDidMount() {
         this.AccountPearl = new AccountPearl();
     }
     login() {

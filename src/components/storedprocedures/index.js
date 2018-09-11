@@ -14,7 +14,6 @@ class StoredProcedures extends Component {
             isEditingProcedure: false,
             procedure: null
         };
-        this.ScrollPearl = new ScrollPearl();
         // check if production or not
         if (window.location.href === 'http://localhost:3000/') {
             this.rootUrl = 'http://localhost:5000/stored_procedures';
@@ -23,6 +22,7 @@ class StoredProcedures extends Component {
         }
     }
     componentDidMount() {
+        this.ScrollPearl = new ScrollPearl();
         axios.get(this.rootUrl + '/get')
             .then((response) => {
                 if (response.data.success) {
@@ -79,20 +79,24 @@ class StoredProcedures extends Component {
         this.setState({
             isAddingProcedure: false
         });
-        this.ScrollPearl.allowScroll();
+        this.ScrollPearl.setState({
+            isAllowed: true
+        });
     }
     exitEditingProcedure() {
         this.setState({
             isEditingProcedure: false,
             procedure: null
         });
-        this.ScrollPearl.allowScroll();
+        this.ScrollPearl.setState({
+            isAllowed: true
+        });
     }
     render() {
         return (
             <div className="StoredProcedures flex flex-col">
                 <div className="p-4">
-                    <div onClick={() => {this.setState({isAddingProcedure: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
+                    <div onClick={() => {this.setState({isAddingProcedure: true}); this.ScrollPearl.setState({isAllowed: true});}} className={"bg-white text-teal cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
                         Add Procedure
                     </div>
                 </div>

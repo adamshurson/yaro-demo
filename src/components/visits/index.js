@@ -12,7 +12,6 @@ class Visit extends Component {
             isEditingVisit: false,
             visit: null
         };
-        this.ScrollPearl = new ScrollPearl();
         // check if production or not
         if (window.location.href === 'http://localhost:3000/') {
             this.rootUrl = 'http://localhost:5000/visits';
@@ -21,6 +20,7 @@ class Visit extends Component {
         }
     }
     componentDidMount() {
+        this.ScrollPearl = new ScrollPearl();
         axios.get(this.rootUrl + '/get')
             .then((response) => {
                 if (response.data.success) {
@@ -77,14 +77,18 @@ class Visit extends Component {
         this.setState({
             isAddingVisit: false
         });
-        this.ScrollPearl.allowScroll();
+        this.ScrollPearl.setState({
+            isAllowed: true
+        });
     }
     exitEditingVisit() {
         this.setState({
             isEditingVisit: false,
             visit: null
         });
-        this.ScrollPearl.allowScroll();
+        this.ScrollPearl.setState({
+            isAllowed: true
+        });
     }
     calculateCost(visit) {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
@@ -93,7 +97,7 @@ class Visit extends Component {
         return (
             <div className="Visits flex flex-col">
                 <div className="p-4">
-                    <div onClick={() => {this.setState({isAddingVisit: true}); this.ScrollPearl.preventScroll()}} className={"bg-white text-teal cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
+                    <div onClick={() => {this.setState({isAddingVisit: true}); this.ScrollPearl.setState({isAllowed: true});}} className={"bg-white text-teal cursor-pointer shadow-md hover:shadow-lg rounded p-4 flex items-center justify-center"}>
                         Add Visit
                     </div>
                 </div>

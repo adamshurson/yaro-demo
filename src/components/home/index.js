@@ -12,7 +12,6 @@ class Home extends Component {
         this.state = {
             visits: []
         };
-        this.VisitPearl = new VisitPearl();
         // check if production or not
         if (window.location.href === 'http://localhost:3000/') {
             this.rootUrl = 'http://localhost:5000';
@@ -21,6 +20,7 @@ class Home extends Component {
         }
     }
     componentDidMount() {
+        this.VisitPearl = new VisitPearl();
         axios.get(this.rootUrl + '/visits/get')
         .then((response) => {
             if (response.data.success) {

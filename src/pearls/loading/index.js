@@ -1,8 +1,10 @@
 import Pearl from '@ashurson/pearl';
 class LoadingPearl extends Pearl {
-    init() {
-        this.setState({
-            isLoading: false
+    constructor() {
+        super('LoadingPearl', function() {
+            this.state = {
+                isLoading: false
+            };
         });
     }
 }

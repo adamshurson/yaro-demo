@@ -1,9 +1,11 @@
 import Pearl from '@ashurson/pearl';
 
 class VisitPearl extends Pearl {
-    init() {
-        this.setState({
-            visit: {}
+    constructor() {
+        super('VisitPearl', function() {
+            this.state = {
+                visit: {}
+            };
         });
     }
 }

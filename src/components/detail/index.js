@@ -17,9 +17,9 @@ class Detail extends Component {
                 date: null
             }
         };
-        this.VisitPearl = new VisitPearl();
     }
     componentDidMount() {
+        this.VisitPearl = new VisitPearl();
         this.VisitPearl.subscribe((newState) => {
             this.setState({
                 visit: newState.visit
