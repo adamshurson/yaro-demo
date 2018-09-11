@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="73a423ee-0f5b-40ac-9c31-9bec644ffc26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loginview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/registerview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registerview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/storedprocedures/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/storedprocedures/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/visits/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/visits/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pearls/account/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/account/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pearls/loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/loading/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pearls/scroll/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/scroll/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pearls/visit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/visit/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -92,13 +78,14 @@
     <session id="-1359885311">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -139,22 +126,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pearls/account/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#729#1726#0" />
-                <element signature="e#1781#2687#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -306,7 +278,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Pearl/pearl" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -423,12 +395,13 @@
       <workItem from="1536619236299" duration="10219000" />
       <workItem from="1536671594800" duration="13000" />
       <workItem from="1536673837442" duration="8073000" />
-      <workItem from="1536685383892" duration="2890000" />
+      <workItem from="1536685383892" duration="2955000" />
+      <workItem from="1536688549316" duration="112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65061000" />
+    <option name="totallyTimeSpent" value="65238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1214" y="1072" width="1382" height="744" extended-state="6" />
@@ -666,9 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,9 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,11 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#729#1726#0" />
-            <element signature="e#1781#2687#0" />
-          </folding>
         </state>
       </provider>
     </entry>
