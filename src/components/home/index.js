@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import GoogleMapReact from 'google-map-react';
 import axios from "axios";
-import VisitMap from "../VisitMap";
-import {Map} from "google-maps-react";
+import VisitMap from "../visitmap/index";
+import GoogleMapReact from 'google-map-react';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.props = props;
-        this.zoom = 11;
-        this.center = {
-            lat: 59.95,
-            lng: 30.33
-        };
         this.state = {
             visits: []
         };
@@ -52,7 +46,7 @@ class Home extends Component {
                 data: [1, 2, 3]
             }]
         };
-        const AnyReactComponent = ({ text }) => <div>{text}</div>;
+        const Title = ({ text }) => <div className="text-white p-4 min-w-fit whitespace-no-wrap bg-opaque-dark rounded-full">{text}</div>;
         return (
             <div className="Home flex flex-col">
                 <div className="flex flex-wrap">
@@ -65,7 +59,7 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="p-4 w-full lg:w-1/2">
-                        <div style={{"height": "40vh"}} className="shadow-md hover:shadow-lg rounded overflow-hidden relative">
+                        <div className="shadow-md hover:shadow-lg rounded overflow-hidden relative h-64 lg:h-full">
                             <VisitMap visits={this.state.visits}/>
                         </div>
                     </div>
@@ -74,8 +68,8 @@ class Home extends Component {
                     {
                         this.state.visits.map((visit) => {
                             return <div key={visit._id} className={"flex w-full lg:w-1/2 xl:w-1/3 p-4"}>
-                                <div onClick={() => this.props.setPage('detail')} className={"flex w-full bg-white items-center shadow-md hover:shadow-lg cursor-pointer rounded text-teal"}>
-                                    <div className={"flex flex-1 px-4 flex-col"}>
+                                <div className={"flex w-full bg-white items-center shadow-md hover:shadow-lg text-teal"}>
+                                    <div onClick={() => this.props.setPage('detail')} className={"flex flex-1 px-4 flex-col cursor-pointer"}>
                                         <div className={"pb-2 flex"}>
                                             <h5 className={"font-normal"}>{(new Date(visit.date)).toLocaleDateString()}</h5>
                                             <h5 className={"font-normal ml-auto"}>${this.calculateCost(visit)}</h5>
@@ -83,7 +77,7 @@ class Home extends Component {
                                         <h5 className={"py-2 font-normal"}>{visit.doctor.profile.first_name + " " + visit.doctor.profile.last_name}</h5>
                                         <h5 className={"py-2 font-normal"}>Blue Cross Blue Shield</h5>
                                     </div>
-                                    <div className={"w-1/2 h-32 rounded-r"}>
+                                    <div className={"w-1/2 h-32 rounded-r overflow-hidden relative"}>
                                         <GoogleMapReact
                                             bootstrapURLKeys={{ key: "AIzaSyBYYFXhpIKcxaiDqLDGhJNxs9T9g5Bk4t4" }}
                                             defaultCenter={
@@ -92,12 +86,12 @@ class Home extends Component {
                                                     lng: visit.location.lon
                                                 }
                                             }
-                                            defaultZoom={11}
+                                            defaultZoom={13}
                                         >
-                                            <AnyReactComponent
+                                            <Title
                                                 lat={visit.location.lat}
                                                 lng={visit.location.lon}
-                                                text={visit.doctor.profile.first_name + " " + visit.doctor.profile.last_name}
+                                                text={visit.location.street}
                                             />
                                         </GoogleMapReact>
                                     </div>

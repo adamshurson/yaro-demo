@@ -6417,6 +6417,12 @@ select:-webkit-autofill:focus {
   background-color: rgba(0, 0, 0, .4);
 }
 
+.min-w-fit {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 .Loader {
   -webkit-animation-fill-mode: forwards;
   background-color: rgb(42, 40, 40);

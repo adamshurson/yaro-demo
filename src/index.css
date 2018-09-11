@@ -50,3 +50,6 @@ select:-webkit-autofill:focus {
 .bg-opaque {
   background-color: rgba(0,0,0,0.4);
 }
+.min-w-fit {
+  min-width: fit-content;
+}
