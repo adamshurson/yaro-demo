@@ -7,7 +7,22 @@ const User = require("../models/user");
 const jwt = require('jsonwebtoken');
 const crypto = require("crypto");
 
-// login
+router.post('/authorizeToken', function(req, res) {
+    const required = [
+        "token"
+    ];
+    if (validator.validateBody(req.body, required)) {
+        jwt.verify(req.body.token, config.secret, function(err, decoded) {
+            if (err) {
+                return res.status(200).json({success: false, err: err});
+            } else {
+                return res.status(200).json({success: true});
+            }
+        });
+    } else {
+        return res.status(400).json({success: false, err: "Token required"});
+    }
+});
 router.post('/login', function(req, res) {
     const required = [
         "username",

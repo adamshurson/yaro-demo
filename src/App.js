@@ -23,7 +23,6 @@ class App extends Component {
             });
         }, 2000);
         this.AccountPearl = new AccountPearl();
-        console.log(this.AccountPearl);
         this.LoadingPearl = new LoadingPearl();
         this.LoadingPearl.setState({
             isLoading: true

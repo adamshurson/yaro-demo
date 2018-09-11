@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import StoredProcedures from "../storedprocedures";
 import Visits from "../visits";
 import ScrollPearl from '../../pearls/scroll';
+import AccountPearl from '../../pearls/account';
 
 class MainView extends Component {
     constructor() {
@@ -45,14 +46,12 @@ class MainView extends Component {
     }
     componentDidMount() {
         this.ScrollPearl = new ScrollPearl();
+        this.AccountPearl = new AccountPearl();
         this.ScrollPearl.subscribe((newState) => {
             this.setState({
                 canScrollMain: newState.isAllowed
             });
         });
-        console.log(global.window.ScrollPearl);
-        console.log(window.ScrollPearl);
-        console.log(this.ScrollPearl);
     }
     setPage(page) {
         this.setState({
@@ -98,6 +97,7 @@ class MainView extends Component {
                                 }
                             })
                         }
+                        <h2 key={'logout'} onClick={() => this.AccountPearl.logout()} className={"text-right p-2 text-white hover:text-yellow cursor-pointer"}>Logout</h2>
                     </div>
                 </div>
                 <div className={"overflow-hidden flex-1"}>

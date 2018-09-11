@@ -14,8 +14,8 @@ class AccountPearl extends Pearl {
             }
             this.state = {
                 isLoggedIn: false,
-                userObject: null,
-                token: null
+                userObject: localStorage.getItem('userObject'),
+                token: localStorage.getItem('token')
             };
             this.login = function(username, password, fallback) {
                 this.LoadingPearl.setState({ isLoading: true});
@@ -30,8 +30,30 @@ class AccountPearl extends Pearl {
                                 userObject: response.data.userObject,
                                 token: response.data.token
                             });
+                            localStorage.setItem('token', response.data.token);
+                            localStorage.setItem('userObject', JSON.stringify(response.data.userObject));
                         } else {
                             fallback(response.data.err);
+                        }
+                        this.LoadingPearl.setState({ isLoading: false});
+                    })
+                    .catch((error) => {
+                        console.log("Unexpected error: " + error);
+                        this.LoadingPearl.setState({ isLoading: false});
+                    });
+            };
+            this.authorizeToken = function(token) {
+                this.LoadingPearl.setState({ isLoading: true});
+                axios.post(this.rootUrl + '/authorizeToken', {
+                    token: token
+                })
+                    .then((response) => {
+                        if (response.data.success) {
+                            this.setState({
+                                isLoggedIn: true,
+                                token: response.data.token
+                            });
+                            localStorage.setItem('token', response.data.token);
                         }
                         this.LoadingPearl.setState({ isLoading: false});
                     })
@@ -60,6 +82,18 @@ class AccountPearl extends Pearl {
                         this.LoadingPearl.setState({ isLoading: false});
                     });
             };
+            this.logout = function() {
+                localStorage.removeItem('token');
+                localStorage.removeItem('userObject');
+                this.setState({
+                    userObject: {},
+                    token: null,
+                    isLoggedIn: false
+                });
+            };
+            if (localStorage.getItem('token') !== null) {
+                this.authorizeToken(localStorage.getItem('token'));
+            }
         });
     }
 }
