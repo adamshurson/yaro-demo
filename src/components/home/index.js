@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
 import axios from "axios";
 import VisitMap from "../visitmap/index";
 import GoogleMapReact from 'google-map-react';
+import Spending from "../spending";
 
 class Home extends Component {
     constructor(props) {
@@ -38,24 +37,13 @@ class Home extends Component {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
     }
     render() {
-        const options = {
-            title: {
-                text: 'My Spending'
-            },
-            series: [{
-                data: [1, 2, 3]
-            }]
-        };
         const Title = ({ text }) => <div className="text-white p-4 min-w-fit whitespace-no-wrap bg-opaque-dark rounded-full">{text}</div>;
         return (
             <div className="Home flex flex-col">
                 <div className="flex flex-wrap">
                     <div className="p-4 w-full lg:w-1/2">
                         <div className="shadow-md hover:shadow-lg rounded overflow-hidden">
-                            <HighchartsReact
-                                highcharts={Highcharts}
-                                options={options}
-                            />
+                            <Spending visits={this.state.visits}/>
                         </div>
                     </div>
                     <div className="p-4 w-full lg:w-1/2">
