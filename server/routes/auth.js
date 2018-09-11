@@ -16,7 +16,7 @@ router.post('/authorizeToken', function(req, res) {
             if (err) {
                 return res.status(200).json({success: false, err: err});
             } else {
-                return res.status(200).json({success: true});
+                return res.status(200).json({success: true, userObject: decoded});
             }
         });
     } else {

@@ -51,9 +51,9 @@ class AccountPearl extends Pearl {
                         if (response.data.success) {
                             this.setState({
                                 isLoggedIn: true,
-                                token: response.data.token
+                                userObject: response.data.userObject
                             });
-                            localStorage.setItem('token', response.data.token);
+                            localStorage.setItem('userObject', response.data.userObject);
                         }
                         this.LoadingPearl.setState({ isLoading: false});
                     })
