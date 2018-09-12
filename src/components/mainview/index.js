@@ -5,6 +5,8 @@ import Logo from "../logo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import StoredProcedures from "../storedprocedures";
 import Visits from "../visits";
+import Messages from "../messages";
+import NewMessage from "../newmessage";
 import ScrollPearl from '../../pearls/scroll';
 import AccountPearl from '../../pearls/account';
 
@@ -19,13 +21,18 @@ class MainView extends Component {
             },
             'detail': {
                 title: 'Appointment Detail',
-                component: <Detail setPage={(page) => this.setPage(page)}/>,
+                component: <Detail />,
                 isRoot: false
             },
             'messages': {
                 title: 'Messages',
-                component: <div>test 2</div>,
+                component: <Messages setPage={(page) => this.setPage(page)}/>,
                 isRoot: true
+            },
+            'new_message': {
+                title: 'New Message',
+                component: <NewMessage setPage={(page) => this.setPage(page)}/>,
+                isRoot: false
             },
             'visits': {
                 title: 'Visits',
@@ -34,7 +41,7 @@ class MainView extends Component {
             },
             'stored_procedures': {
                 title: 'Stored Procedures',
-                component: <StoredProcedures setPage={(page) => this.setPage(page)}/>,
+                component: <StoredProcedures />,
                 isRoot: true
             }
         };

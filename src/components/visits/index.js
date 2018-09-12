@@ -22,18 +22,18 @@ class Visit extends Component {
     componentDidMount() {
         this.ScrollPearl = new ScrollPearl();
         axios.get(this.rootUrl + '/get')
-            .then((response) => {
-                if (response.data.success) {
-                    this.setState({
-                        visits: response.data.visits
-                    });
-                } else {
-                    console.log(response.data.err);
-                }
-            })
-            .catch((error) => {
-                console.log("Unexpected error: " + error);
-            });
+        .then((response) => {
+            if (response.data.success) {
+                this.setState({
+                    visits: response.data.visits
+                });
+            } else {
+                console.log(response.data.err);
+            }
+        })
+        .catch((error) => {
+            console.log("Unexpected error: " + error);
+        });
     }
     addVisit(visit) {
         const visits = this.state.visits;

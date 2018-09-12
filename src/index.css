@@ -27,6 +27,10 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: unset;
   transition: background-color 5000s ease-in-out 0s;
 }
+textarea {
+  resize: none;
+  min-height: 30vh;
+}
 *::-webkit-scrollbar {
   width: 1em;
 }
@@ -37,11 +41,8 @@ select:-webkit-autofill:focus {
   background-color: #60C2AE;
   outline: 1px solid #60C2AE;
 }
-*[class^='hover:shadow'], *[class*=' hover:shadow'] {
-  transition: 0.2s box-shadow ease-in-out;
-}
-*[class^='hover:text'], *[class*=' hover:text'] {
-  transition: 0.2s color ease-in-out;
+*[class^='hover'], *[class*=' hover'] {
+  transition: 0.2s all ease-in-out;
 }
 .h-screen {
   height: 100vh;

@@ -16,6 +16,7 @@ const route_auth = require('./routes/auth');
 const route_stored_procedures = require('./routes/stored_procedure');
 const route_doctors = require('./routes/doctors');
 const route_visits = require('./routes/visits');
+const route_messages = require('./routes/messages');
 
 // connect to db
 const dbUrl = (isTestEnv ? config.testDatabase : config.database);
@@ -47,6 +48,7 @@ app.use('/auth', route_auth);
 app.use('/stored_procedures', route_stored_procedures);
 app.use('/doctors', route_doctors);
 app.use('/visits', route_visits);
+app.use('/messages', route_messages);
 
 // start app
 app.listen(port);
