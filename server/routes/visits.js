@@ -3,18 +3,34 @@ const express = require("express");
 const router = express.Router();
 const Visit = require("../models/visit");
 const validator = require("../utilities/validator");
+const jwt = require('jsonwebtoken');
+const config = require('../config');
 
-router.get('/get', function(req, res) {
-    Visit.find({}).populate("doctor").exec().then(function(vis) {
-        return res.status(200).json({success: true, visits: vis});
-    })
-    .catch(function(err) {
-        return res.status(200).json({success: false, err: err});
-    });
+router.post('/get', function(req, res) {
+    const required = [
+        'token'
+    ];
+    if (validator.validateBody(req.body, required)) {
+        jwt.verify(req.body.token, config.secret, function (err, decoded) {
+            if (err) {
+                return res.status(200).json({success: false, err: err});
+            } else {
+                Visit.find({user: decoded._id}).populate("doctor").exec().then(function (vis) {
+                    return res.status(200).json({success: true, visits: vis});
+                })
+                    .catch(function (err) {
+                        return res.status(200).json({success: false, err: err});
+                    });
+            }
+        });
+    } else {
+        return res.status(400).json({success: false, err: "Token required"});
+    }
 });
 
 router.post('/create', function(req, res) {
     const required = [
+        "token",
         "procedures",
         "doctor",
         "date",

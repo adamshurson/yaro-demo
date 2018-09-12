@@ -55,7 +55,8 @@ class AddStoredProcedure extends Component {
             procedures: this.state.procedures,
             doctor: this.state.doctor,
             date: this.state.date,
-            location: this.state.location
+            location: this.state.location,
+            token: this.props.token
         };
         axios.post(this.rootUrl + '/visits/create', visit)
             .then((response) => {

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73a423ee-0f5b-40ac-9c31-9bec644ffc26" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/server/models/visit.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/visit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/visits.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/visits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addvisit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addvisit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/visits/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/visits/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -93,7 +98,7 @@
           <entry key="css" value="5" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="141" />
+          <entry key="js" value="149" />
           <entry key="json" value="5" />
         </counts>
       </usages-collector>
@@ -102,7 +107,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="141" />
+          <entry key="JavaScript" value="149" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -110,7 +115,7 @@
         <counts>
           <entry key="css" value="178" />
           <entry key="html" value="14" />
-          <entry key="js" value="16722" />
+          <entry key="js" value="17005" />
           <entry key="json" value="146" />
         </counts>
       </usages-collector>
@@ -119,7 +124,7 @@
           <entry key="CSS" value="178" />
           <entry key="HTML" value="14" />
           <entry key="JSON" value="146" />
-          <entry key="JavaScript" value="16722" />
+          <entry key="JavaScript" value="17005" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -128,10 +133,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/routes/messages.js">
+        <entry file="file://$PROJECT_DIR$/src/components/home/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="66" column="66" selection-start-line="66" selection-start-column="66" selection-end-line="66" selection-end-column="66" />
+            <state relative-caret-position="230">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/visits/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="30" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,8 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/loginview/loginview.js" />
-        <option value="$PROJECT_DIR$/src/components/loginview/index.js.css" />
         <option value="$PROJECT_DIR$/tailwind.css" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/pearls/navigation/index.js" />
@@ -188,7 +206,6 @@
         <option value="$PROJECT_DIR$/test/stored_procedures.js" />
         <option value="$PROJECT_DIR$/test/auth.js" />
         <option value="$PROJECT_DIR$/server/utilities/validator.js" />
-        <option value="$PROJECT_DIR$/src/components/addvisit/index.js" />
         <option value="$PROJECT_DIR$/src/components/editingstoredprocedure/index.js" />
         <option value="$PROJECT_DIR$/src/pearls/allowscroll/index.js" />
         <option value="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" />
@@ -197,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/components/VisitMap.js" />
         <option value="$PROJECT_DIR$/src/components/visitmap/index.js" />
         <option value="$PROJECT_DIR$/src/components/spending/index.js" />
-        <option value="$PROJECT_DIR$/src/components/home/index.js" />
         <option value="$PROJECT_DIR$/src/components/detail/index.js" />
         <option value="$PROJECT_DIR$/src/components/registerview/index.js" />
         <option value="$PROJECT_DIR$/src/components/storedprocedures/index.js" />
@@ -209,14 +225,18 @@
         <option value="$PROJECT_DIR$/server/routes/auth.js" />
         <option value="$PROJECT_DIR$/src/pearls/account/index.js" />
         <option value="$PROJECT_DIR$/server/models/message.js" />
-        <option value="$PROJECT_DIR$/src/components/visits/index.js" />
         <option value="$PROJECT_DIR$/server/main.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/newmessage/index.js" />
         <option value="$PROJECT_DIR$/src/components/mainview/index.js" />
         <option value="$PROJECT_DIR$/src/components/messagedetail/index.js" />
         <option value="$PROJECT_DIR$/src/components/messages/index.js" />
+        <option value="$PROJECT_DIR$/server/models/visit.js" />
         <option value="$PROJECT_DIR$/server/routes/messages.js" />
+        <option value="$PROJECT_DIR$/server/routes/visits.js" />
+        <option value="$PROJECT_DIR$/src/components/visits/index.js" />
+        <option value="$PROJECT_DIR$/src/components/addvisit/index.js" />
+        <option value="$PROJECT_DIR$/src/components/home/index.js" />
       </list>
     </option>
   </component>
@@ -262,13 +282,27 @@
             <path>
               <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="visits" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -398,12 +432,12 @@
       <workItem from="1536685383892" duration="2955000" />
       <workItem from="1536688549316" duration="208000" />
       <workItem from="1536692750912" duration="985000" />
-      <workItem from="1536706277297" duration="10300000" />
+      <workItem from="1536706277297" duration="11182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76619000" />
+    <option name="totallyTimeSpent" value="77501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -411,9 +445,9 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17633928" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.17633928" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4985119" visible="true" weight="0.115771815" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4985119" visible="true" weight="0.29362416" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5014881" side_tool="true" weight="0.18624161" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" sideWeight="0.49947312" weight="0.30911064" />
@@ -571,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/home/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/detail/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -644,24 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/visit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="21" lean-forward="true" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/visits.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -682,24 +695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/visits/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -735,16 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/messages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/newmessage/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -755,10 +744,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/visit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="66" column="66" selection-start-line="66" selection-start-column="66" selection-end-line="66" selection-end-column="66" />
+        <state relative-caret-position="286">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/visits.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="50" column="18" lean-forward="true" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/messages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="58" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/visits/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

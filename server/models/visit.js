@@ -10,6 +10,10 @@ module.exports = mongoose.model('Visit', new Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'Doctor'
     },
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User'
+    },
     date: String,
     location: {
         city: String,

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import AddVisit from "../addvisit";
 import ScrollPearl from '../../pearls/scroll';
+import AccountPearl from "../../pearls/account";
 
 class Visit extends Component {
     constructor() {
@@ -21,19 +22,28 @@ class Visit extends Component {
     }
     componentDidMount() {
         this.ScrollPearl = new ScrollPearl();
-        axios.get(this.rootUrl + '/get')
-        .then((response) => {
-            if (response.data.success) {
-                this.setState({
-                    visits: response.data.visits
-                });
-            } else {
-                console.log(response.data.err);
-            }
-        })
-        .catch((error) => {
-            console.log("Unexpected error: " + error);
+        this.AccountPearl = new AccountPearl();
+        this.AccountPearl.subscribe((newState) => {
+            this.setState({
+                token: newState.token,
+                userObject: newState.userObject
+            }, this.fetchVisits);
         });
+    }
+    fetchVisits() {
+        axios.post(this.rootUrl + '/get', {token: this.state.token})
+            .then((response) => {
+                if (response.data.success) {
+                    this.setState({
+                        visits: response.data.visits
+                    });
+                } else {
+                    console.log(response.data.err);
+                }
+            })
+            .catch((error) => {
+                console.log("Unexpected error: " + error);
+            });
     }
     addVisit(visit) {
         const visits = this.state.visits;
@@ -124,15 +134,9 @@ class Visit extends Component {
                 }
                 </div>
                 { this.state.isAddingVisit
-                    ? <AddVisit addVisit={(visit) => this.addVisit(visit)} exitAddingVisit={() => this.exitAddingVisit()}/>
+                    ? <AddVisit token={this.state.token} addVisit={(visit) => this.addVisit(visit)} exitAddingVisit={() => this.exitAddingVisit()}/>
                     : null
                 }
-                {/*{ this.state.isEditingProcedure*/}
-                    {/*? <EditingStoredProcedure procedure={this.state.procedure}*/}
-                          {/*editProcedure={(procedure) => this.editProcedure(procedure)}*/}
-                          {/*exitEditingProcedure={() => this.exitEditingProcedure()}/>*/}
-                    {/*: null*/}
-                {/*}*/}
             </div>
         );
     }

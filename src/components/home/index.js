@@ -4,6 +4,7 @@ import VisitMap from "../visitmap/index";
 import GoogleMapReact from 'google-map-react';
 import Spending from "../spending";
 import VisitPearl from '../../pearls/visit';
+import AccountPearl from "../../pearls/account";
 
 class Home extends Component {
     constructor(props) {
@@ -21,19 +22,28 @@ class Home extends Component {
     }
     componentDidMount() {
         this.VisitPearl = new VisitPearl();
-        axios.get(this.rootUrl + '/visits/get')
-        .then((response) => {
-            if (response.data.success) {
-                this.setState({
-                    visits: response.data.visits
-                });
-            } else {
-                console.log(response.data.err);
-            }
-        })
-        .catch((error) => {
-            console.log("Unexpected error: " + error);
+        this.AccountPearl = new AccountPearl();
+        this.AccountPearl.subscribe((newState) => {
+            this.setState({
+                token: newState.token,
+                userObject: newState.userObject
+            }, this.fetchVisits);
         });
+    }
+    fetchVisits() {
+        axios.post(this.rootUrl + '/visits/get', {token: this.state.token})
+            .then((response) => {
+                if (response.data.success) {
+                    this.setState({
+                        visits: response.data.visits
+                    });
+                } else {
+                    console.log(response.data.err);
+                }
+            })
+            .catch((error) => {
+                console.log("Unexpected error: " + error);
+            });
     }
     calculateCost(visit) {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
