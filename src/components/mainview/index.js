@@ -9,10 +9,21 @@ import Messages from "../messages";
 import NewMessage from "../newmessage";
 import ScrollPearl from '../../pearls/scroll';
 import AccountPearl from '../../pearls/account';
+import MessageDetail from "../messagedetail";
 
 class MainView extends Component {
     constructor() {
         super();
+        this.state = {
+            activePage: 'home',
+            menuOpen: false,
+            canScrollMain: true,
+            currentMessage: {
+                doctor: {
+                    profile: {}
+                }
+            }
+        };
         this.pages = {
             'home': {
                 title: 'Home',
@@ -26,7 +37,7 @@ class MainView extends Component {
             },
             'messages': {
                 title: 'Messages',
-                component: <Messages setPage={(page) => this.setPage(page)}/>,
+                component: <Messages viewMessage={(message) => this.viewMessage(message)} setPage={(page) => this.setPage(page)}/>,
                 isRoot: true
             },
             'new_message': {
@@ -34,9 +45,14 @@ class MainView extends Component {
                 component: <NewMessage setPage={(page) => this.setPage(page)}/>,
                 isRoot: false
             },
+            'message_detail': {
+                title: 'Message Detail',
+                component: <MessageDetail message={this.state.currentMessage} setPage={(page) => this.setPage(page)}/>,
+                isRoot: false
+            },
             'visits': {
                 title: 'Visits',
-                component: <Visits/>,
+                component: <Visits />,
                 isRoot: true
             },
             'stored_procedures': {
@@ -44,11 +60,6 @@ class MainView extends Component {
                 component: <StoredProcedures />,
                 isRoot: true
             }
-        };
-        this.state = {
-            activePage: 'home',
-            menuOpen: false,
-            canScrollMain: true
         };
     }
     componentDidMount() {
@@ -67,6 +78,14 @@ class MainView extends Component {
         });
         this.ScrollPearl.setState({
             isAllowed: true
+        });
+    }
+    viewMessage(message) {
+        this.setState({
+            currentMessage: message
+        }, () => {
+            this.pages.message_detail.component = <MessageDetail message={this.state.currentMessage} setPage={(page) => this.setPage(page)}/>;
+            this.setPage('message_detail');
         });
     }
     toggleMenu() {

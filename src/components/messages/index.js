@@ -89,7 +89,7 @@ class Messages extends React.Component {
                     {
                         this.getCurrentMessages().map((message) => {
                             return <div key={message._id} className={"w-full md:w-1/2 lg:w-1/3 p-4"}>
-                                <div className="Message bg-white w-full shadow-md hover:shadow-lg rounded p-4 relative">
+                                <div onClick={() => this.props.viewMessage(message)} className="Message cursor-pointer bg-white w-full shadow-md hover:shadow-lg rounded p-4 relative">
                                     <div className={"flex pb-4"}>
                                         <h4 className={"text-teal"}>{message.doctor.profile.first_name + " " + message.doctor.profile.last_name}</h4>
                                         <h4 className={"text-teal ml-auto font-normal"}>{(new Date(message.date)).toLocaleDateString()}</h4>
