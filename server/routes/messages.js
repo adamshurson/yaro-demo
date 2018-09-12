@@ -53,11 +53,20 @@ router.post('/create', function(req, res) {
             messageObj[field] = req.body[field];
         });
         const newMessage = new Message(messageObj);
-        newMessage.save(function(err, newMessage) {
+        newMessage.save(function(err) {
             if (err) {
                 return res.status(200).json({success: false});
             } else {
-                return res.status(200).json({success: true});
+                messageObj.content = "Hi there, this is a test response to your message!";
+                messageObj.senderType = 'doctor';
+                const copyMessage = new Message(messageObj);
+                copyMessage.save(function(err) {
+                    if (err) {
+                        return res.status(200).json({success: false});
+                    } else {
+                        return res.status(200).json({success: true});
+                    }
+                });
             }
         });
     } else {
