@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73a423ee-0f5b-40ac-9c31-9bec644ffc26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addvisit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addvisit/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -95,7 +96,7 @@
           <entry key="css" value="5" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="162" />
+          <entry key="js" value="165" />
           <entry key="json" value="5" />
         </counts>
       </usages-collector>
@@ -104,7 +105,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="162" />
+          <entry key="JavaScript" value="165" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -112,7 +113,7 @@
         <counts>
           <entry key="css" value="178" />
           <entry key="html" value="14" />
-          <entry key="js" value="17737" />
+          <entry key="js" value="17837" />
           <entry key="json" value="146" />
         </counts>
       </usages-collector>
@@ -121,7 +122,7 @@
           <entry key="CSS" value="178" />
           <entry key="HTML" value="14" />
           <entry key="JSON" value="146" />
-          <entry key="JavaScript" value="17737" />
+          <entry key="JavaScript" value="17837" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -129,15 +130,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/home/index.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/addstoredprocedure/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="111" column="128" selection-start-line="111" selection-start-column="128" selection-end-line="111" selection-end-column="128" />
-              <folding>
-                <element signature="e#2097#2770#0" />
-                <element signature="e#2791#5363#0" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="46" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="141" column="99" lean-forward="true" selection-start-line="141" selection-start-column="99" selection-end-line="141" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -194,7 +200,6 @@
         <option value="$PROJECT_DIR$/server/utilities/validator.js" />
         <option value="$PROJECT_DIR$/src/components/editingstoredprocedure/index.js" />
         <option value="$PROJECT_DIR$/src/pearls/allowscroll/index.js" />
-        <option value="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/VisitMap.js" />
@@ -217,12 +222,13 @@
         <option value="$PROJECT_DIR$/server/models/visit.js" />
         <option value="$PROJECT_DIR$/server/routes/messages.js" />
         <option value="$PROJECT_DIR$/server/routes/visits.js" />
-        <option value="$PROJECT_DIR$/src/components/addvisit/index.js" />
         <option value="$PROJECT_DIR$/src/components/visits/index.js" />
         <option value="$PROJECT_DIR$/src/components/newmessage/index.js" />
         <option value="$PROJECT_DIR$/src/components/mainview/index.js" />
         <option value="$PROJECT_DIR$/src/components/detail/index.js" />
         <option value="$PROJECT_DIR$/src/components/home/index.js" />
+        <option value="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" />
+        <option value="$PROJECT_DIR$/src/components/addvisit/index.js" />
       </list>
     </option>
   </component>
@@ -280,14 +286,7 @@
               <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="visits" type="462c0819:PsiDirectoryNode" />
+              <item name="addvisit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -422,12 +421,12 @@
       <workItem from="1536718351306" duration="164000" />
       <workItem from="1536718729713" duration="1095000" />
       <workItem from="1536782783499" duration="124000" />
-      <workItem from="1536788389179" duration="1620000" />
+      <workItem from="1536788389179" duration="2126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80650000" />
+    <option name="totallyTimeSpent" value="81156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -437,7 +436,7 @@
       <window_info id="npm" order="1" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.22544643" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4985119" visible="true" weight="0.28355706" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4985119" visible="true" weight="0.24832214" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5014881" side_tool="true" weight="0.18624161" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" sideWeight="0.49947312" weight="0.30911064" />
@@ -545,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="36" column="99" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/addstoredprocedure/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -731,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/newmessage/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -759,21 +744,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/visits/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="111" column="128" selection-start-line="111" selection-start-column="128" selection-end-line="111" selection-end-column="128" />
+        <state relative-caret-position="184">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
           <folding>
             <element signature="e#2097#2770#0" />
             <element signature="e#2791#5363#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/visits/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/addstoredprocedure/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="46" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="141" column="99" lean-forward="true" selection-start-line="141" selection-start-column="99" selection-end-line="141" selection-end-column="99" />
         </state>
       </provider>
     </entry>

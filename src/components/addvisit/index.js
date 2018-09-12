@@ -138,7 +138,10 @@ class AddStoredProcedure extends Component {
                                 this.state.procedures.map((proc, index) => {
                                     return <div key={index} className="flex">
                                         <p className={"flex-1 px-4 py-2 text-teal my-2 rounded border-2 border-teal focus:outline-none"}>{proc.name} cost:</p>
-                                        <input value={proc.cost} onChange={(evt) => this.setCost(index, evt.target.value)} type={"number"} step={1} className={"ml-8 px-4 py-2 text-teal my-2 rounded border-2 border-teal focus:outline-none"}/>
+                                        <div className={"flex ml-8 px-4 py-2 text-teal my-2 rounded border-2 border-teal items-center"}>
+                                            <FontAwesomeIcon className="h-4" icon={"dollar-sign"}/>
+                                            <input value={proc.cost} onChange={(evt) => this.setCost(index, evt.target.value)} type={"number"} step={1} className={"flex-1 pl-1 text-teal rounded-r focus:outline-none"}/>
+                                        </div>
                                     </div>
                                 })
                             }
