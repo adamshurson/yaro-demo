@@ -56,7 +56,7 @@ class Home extends Component {
     }
     render() {
         const Title = ({ text }) => <div className="text-white p-4 min-w-fit whitespace-no-wrap bg-opaque-dark rounded-full">{text}</div>;
-        return (
+        return this.state.visits.length > 0 ? (
             <div className="Home flex flex-col">
                 <div className="flex flex-wrap">
                     <div className="p-4 w-full lg:w-1/2">
@@ -106,6 +106,10 @@ class Home extends Component {
                         })
                     }
                 </div>
+            </div>
+        ) : (
+            <div className="flex h-full flex justify-center items-center">
+                <p>No Visits! Click <a className="text-teal cursor-pointer" onClick={(evt) => {evt.preventDefault(); this.props.setPage('visits')}}>here</a> to create one.</p>
             </div>
         );
     }
