@@ -30,7 +30,7 @@ router.post('/get', function(req, res) {
 
 router.post('/create', function(req, res) {
     const required = [
-        "token",
+        "user",
         "procedures",
         "doctor",
         "date",

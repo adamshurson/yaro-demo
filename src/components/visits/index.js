@@ -134,7 +134,7 @@ class Visit extends Component {
                 }
                 </div>
                 { this.state.isAddingVisit
-                    ? <AddVisit token={this.state.token} addVisit={(visit) => this.addVisit(visit)} exitAddingVisit={() => this.exitAddingVisit()}/>
+                    ? <AddVisit user={this.state.userObject._id} addVisit={(visit) => this.addVisit(visit)} exitAddingVisit={() => this.exitAddingVisit()}/>
                     : null
                 }
             </div>
