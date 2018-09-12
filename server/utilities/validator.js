@@ -5,7 +5,7 @@ module.exports = {
         requiredArgs.map((arg) => {
             if (!body.hasOwnProperty(arg)) {
                 noMissingParams = false;
-            } else if (body[arg] === null || undefined) {
+            } else if (body[arg] === null || body[arg] === undefined || body[arg] === "") {
                 noMissingParams = false;
             }
         });
