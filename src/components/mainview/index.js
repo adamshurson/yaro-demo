@@ -32,7 +32,7 @@ class MainView extends Component {
             },
             'detail': {
                 title: 'Appointment Detail',
-                component: <Detail />,
+                component: <Detail newMessage={(doctor) => this.newMessage(doctor)} />,
                 isRoot: false
             },
             'messages': {
@@ -87,6 +87,10 @@ class MainView extends Component {
             this.pages.message_detail.component = <MessageDetail message={this.state.currentMessage} setPage={(page) => this.setPage(page)}/>;
             this.setPage('message_detail');
         });
+    }
+    newMessage(doctor) {
+        this.pages.new_message.component = <NewMessage doctor={doctor} setPage={(page) => this.setPage(page)}/>;
+        this.setPage('new_message');
     }
     toggleMenu() {
         // if menu is going to be open, prevent scroll

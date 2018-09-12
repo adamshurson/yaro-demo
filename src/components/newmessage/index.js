@@ -8,7 +8,7 @@ class NewMessage extends React.Component {
         this.props = props;
         this.state = {
             user: 0,
-            doctor: 0,
+            doctor: this.props.doctor || 0,
             doctors: [],
             content: ""
         };

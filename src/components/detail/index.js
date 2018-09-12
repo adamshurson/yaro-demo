@@ -80,7 +80,9 @@ class Detail extends Component {
                         </div>
                     </div>
                 </div>
-                <button className={"px-4 py-2 bg-teal rounded shadow-md hover:shadow-lg mt-4 focus:outline-none text-white"}>Send Dr. Sheatsley a Message</button>
+                <button onClick={() => this.props.newMessage(this.state.visit.doctor._id)} className={"px-4 py-2 bg-teal rounded shadow-md hover:shadow-lg mt-4 focus:outline-none text-white"}>
+                    {"Send Dr. " + this.state.visit.doctor.profile.last_name + " a Message"}
+                </button>
                 <div className={"bg-white flex flex-col shadow-md hover:shadow-lg px-4 py-2 mt-4 rounded overflow-hidden"}>
                     { this.state.visit.procedures.length > 1
                         ? <div>
