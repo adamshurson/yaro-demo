@@ -1,4 +1,4 @@
-// require router
+// requires
 const express = require("express");
 const config = require('../config');
 const router = express.Router();
@@ -7,11 +7,13 @@ const User = require("../models/user");
 const jwt = require('jsonwebtoken');
 const crypto = require("crypto");
 
+// authorizeToken: used for authenticating users when they refresh their browser session but have an active jwt
 router.post('/authorizeToken', function(req, res) {
     const required = [
         "token"
     ];
     if (validator.validateBody(req.body, required)) {
+        // if the jwt is still valid (i.e. hasn't expired yet) then return the user's information
         jwt.verify(req.body.token, config.secret, function(err, decoded) {
             if (err) {
                 return res.status(200).json({success: false, err: err});
@@ -23,6 +25,7 @@ router.post('/authorizeToken', function(req, res) {
         return res.status(400).json({success: false, err: "Token required"});
     }
 });
+// pretty vanilla login function, using recycled login function as it is shared with register's post-action
 router.post('/login', function(req, res) {
     const required = [
         "username",
@@ -34,6 +37,7 @@ router.post('/login', function(req, res) {
         return res.status(400).json({success: false, err: "Username and Password required"});
     }
 });
+// register the user, login them in, and then return their new jwt
 router.post('/register', function(req, res) {
     const required = [
         "username",
@@ -45,6 +49,7 @@ router.post('/register', function(req, res) {
         "birth_date"
     ];
     if (validator.validateBody(req.body, required)) {
+        // make sure user does not exist with the same username
         User.find({username: req.body.username}, function(err, users) {
             if (users.length === 0) {
                 // initialize new user and fill out fields
@@ -77,8 +82,9 @@ router.post('/register', function(req, res) {
         return res.status(200).json({success: false, err: "Please fill out all fields"});
     }
 });
-
+// main login function
 login = function(username, password, res) {
+    // check if there is a user with the supplied username
     User.findOne({
         username: username
     }, function(err, user) {
@@ -93,6 +99,7 @@ login = function(username, password, res) {
             if (password.salt) {
                 comparison = password;
             } else {
+                // user is logging in, make sure to transform the password to compare it to the one in the DB
                 comparison = saltHashPassword(password, user.password.salt);
             }
 
@@ -118,9 +125,11 @@ login = function(username, password, res) {
 
     });
 };
+// generate random salt string of given length
 genRandomString = function(length) {
     return crypto.randomBytes(Math.ceil(length/2)).toString('hex').slice(0,length);
 };
+// one way hash function given a salt
 sha512 = function(pw, salt) {
     const hash = crypto.createHmac('sha512', salt);
     hash.update(pw);
@@ -130,6 +139,8 @@ sha512 = function(pw, salt) {
         salt: salt
     };
 };
+// if salt is supplied, we are logging in and need to compare the given salt
+// otherwise, we are registering and need to create a new salt
 saltHashPassword = function(pw, salt) {
     salt = salt || genRandomString(16);
     return sha512(pw, salt);

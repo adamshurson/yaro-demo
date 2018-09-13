@@ -1,9 +1,10 @@
-// require router
+// requires
 const express = require("express");
 const router = express.Router();
 const validator = require("../utilities/validator");
 const StoredProcedure = require("../models/stored_procedure");
 
+// create a stored procedure so we can use it later for visits
 router.post('/create', function(req, res) {
     const required = [
         "name",
@@ -27,6 +28,7 @@ router.post('/create', function(req, res) {
         return res.status(400).json({success: false, err: "Missing fields"});
     }
 });
+// get stored procedures, just returns a big 'ol list of em.
 router.get('/get', function(req, res) {
     StoredProcedure.find({}, function(err, procedures) {
        if (err) {
@@ -36,15 +38,18 @@ router.get('/get', function(req, res) {
        }
     });
 });
+// delete a stored procedure. note that it does not remove stored procedures that have already been included in visits
 router.post('/delete', function(req, res) {
     const required = [
         "procedure_id"
     ];
     if (validator.validateBody(req.body, required)) {
-        StoredProcedure.findOne({_id: req.body.procedure_id}, function(err, proc) {
+        // find a single stored procedure given an id
+        StoredProcedure.findOne({_id: req.body.procedure_id}, function(err) {
             if (err) {
                 return res.status(400).json({success: false, err: err});
             } else {
+                // after making sure it exists, remove it from the db
                 StoredProcedure.remove({_id: req.body.procedure_id}, function(err) {
                     if (err) {
                         return res.status(400).json({success: false, err: err});
@@ -58,6 +63,7 @@ router.post('/delete', function(req, res) {
         return res.status(400).json({success: false, err: "Missing procedure_id"});
     }
 });
+// edit a stored procedure.
 router.post('/edit', function(req, res) {
     const required = [
         "procedure_id"
@@ -67,6 +73,9 @@ router.post('/edit', function(req, res) {
             if (err) {
                 return res.status(400).json({success: false, err: err});
             } else {
+                // can't map the required array, so we map all keys in the body of the request
+                // this is because you don't have to submit the entire object, just the identifier
+                // and what you want to change
                 Object.keys(req.body).map((key) => {
                     proc[key] = req.body[key];
                 });

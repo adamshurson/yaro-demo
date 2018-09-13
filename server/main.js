@@ -41,6 +41,9 @@ app.use(function(req, res, next) {
 
 // use debugging
 app.use(morgan('dev'));
+// allow cross origin requests to and from our frontend application and our backend application
+// have to use this because our react app is on port 3000 (development) and port 80 (production)
+// while our backend app is on port 5000 (development and production)
 app.use(cors());
 
 // map urls to route handlers
