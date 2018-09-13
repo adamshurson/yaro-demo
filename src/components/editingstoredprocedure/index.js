@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+// view for editing stored procedures
 class EditingStoredProcedure extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +20,7 @@ class EditingStoredProcedure extends Component {
             this.rootUrl = 'http://167.99.107.141/api/stored_procedures';
         }
     }
+    // send a request to edit the procedure on our api
     editProcedure() {
         axios.post(this.rootUrl + '/edit', this.state)
             .then((response) => {

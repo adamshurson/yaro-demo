@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73a423ee-0f5b-40ac-9c31-9bec644ffc26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/doctors.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/doctors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/stored_procedure.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/stored_procedure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/visits.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/visits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/utilities/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/utilities/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/adam_m_shurson.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/adam_m_shurson.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addvisit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addvisit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detail/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/editingstoredprocedure/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/editingstoredprocedure/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pearls/account/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/account/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pearls/loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pearls/scroll/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/scroll/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pearls/visit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pearls/visit/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,16 +90,16 @@
     <session id="-1359885311">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -101,7 +107,7 @@
           <entry key="css" value="5" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="177" />
+          <entry key="js" value="191" />
           <entry key="json" value="5" />
         </counts>
       </usages-collector>
@@ -110,7 +116,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="177" />
+          <entry key="JavaScript" value="191" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -118,7 +124,7 @@
         <counts>
           <entry key="css" value="178" />
           <entry key="html" value="14" />
-          <entry key="js" value="20896" />
+          <entry key="js" value="24899" />
           <entry key="json" value="146" />
         </counts>
       </usages-collector>
@@ -127,7 +133,7 @@
           <entry key="CSS" value="178" />
           <entry key="HTML" value="14" />
           <entry key="JSON" value="146" />
-          <entry key="JavaScript" value="20896" />
+          <entry key="JavaScript" value="24899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -135,20 +141,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/utilities/validator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/main.js">
+        <entry file="file://$PROJECT_DIR$/src/components/editingstoredprocedure/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -200,7 +197,6 @@
         <option value="$PROJECT_DIR$/server/config.js" />
         <option value="$PROJECT_DIR$/test/stored_procedures.js" />
         <option value="$PROJECT_DIR$/test/auth.js" />
-        <option value="$PROJECT_DIR$/src/components/editingstoredprocedure/index.js" />
         <option value="$PROJECT_DIR$/src/pearls/allowscroll/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -210,11 +206,6 @@
         <option value="$PROJECT_DIR$/src/components/registerview/index.js" />
         <option value="$PROJECT_DIR$/src/components/storedprocedures/index.js" />
         <option value="$PROJECT_DIR$/src/components/loginview/index.js" />
-        <option value="$PROJECT_DIR$/src/pearls/loading/index.js" />
-        <option value="$PROJECT_DIR$/src/pearls/scroll/index.js" />
-        <option value="$PROJECT_DIR$/src/pearls/visit/index.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/pearls/account/index.js" />
         <option value="$PROJECT_DIR$/server/models/message.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/messagedetail/index.js" />
@@ -223,10 +214,7 @@
         <option value="$PROJECT_DIR$/src/components/visits/index.js" />
         <option value="$PROJECT_DIR$/src/components/newmessage/index.js" />
         <option value="$PROJECT_DIR$/src/components/mainview/index.js" />
-        <option value="$PROJECT_DIR$/src/components/detail/index.js" />
         <option value="$PROJECT_DIR$/src/components/home/index.js" />
-        <option value="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" />
-        <option value="$PROJECT_DIR$/src/components/addvisit/index.js" />
         <option value="$PROJECT_DIR$/server/routes/auth.js" />
         <option value="$PROJECT_DIR$/server/routes/doctors.js" />
         <option value="$PROJECT_DIR$/server/routes/messages.js" />
@@ -234,6 +222,15 @@
         <option value="$PROJECT_DIR$/server/routes/visits.js" />
         <option value="$PROJECT_DIR$/server/utilities/validator.js" />
         <option value="$PROJECT_DIR$/server/main.js" />
+        <option value="$PROJECT_DIR$/src/pearls/account/index.js" />
+        <option value="$PROJECT_DIR$/src/pearls/scroll/index.js" />
+        <option value="$PROJECT_DIR$/src/pearls/visit/index.js" />
+        <option value="$PROJECT_DIR$/src/pearls/loading/index.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/addstoredprocedure/index.js" />
+        <option value="$PROJECT_DIR$/src/components/addvisit/index.js" />
+        <option value="$PROJECT_DIR$/src/components/detail/index.js" />
+        <option value="$PROJECT_DIR$/src/components/editingstoredprocedure/index.js" />
       </list>
     </option>
   </component>
@@ -268,6 +265,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,18 +276,30 @@
             <path>
               <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yaro-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yaro-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="editingstoredprocedure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Pearl/pearl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mapping-validator" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -413,22 +423,22 @@
       <workItem from="1536718351306" duration="164000" />
       <workItem from="1536718729713" duration="1095000" />
       <workItem from="1536782783499" duration="124000" />
-      <workItem from="1536788389179" duration="4689000" />
+      <workItem from="1536788389179" duration="8338000" />
+      <workItem from="1536858126233" duration="62000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83719000" />
+    <option name="totallyTimeSpent" value="87430000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.22544643" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.15964173" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4985119" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4985119" visible="true" weight="0.16409692" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5014881" side_tool="true" weight="0.18624161" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" sideWeight="0.49947312" weight="0.30911064" />
@@ -451,9 +461,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/logo.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logo.svg" />
     <entry file="file://$PROJECT_DIR$/src/components/loginview/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -511,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/editingstoredprocedure/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="36" column="99" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -551,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/registerview/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
@@ -572,45 +566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pearls/visit/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pearls/scroll/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/loginview/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pearls/loading/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pearls/account/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -663,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/detail/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/mainview/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -681,10 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-          <folding>
-            <element signature="e#2097#2770#0" />
-            <element signature="e#2791#5363#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,20 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
           <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/addstoredprocedure/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="46" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="141" column="99" lean-forward="true" selection-start-line="141" selection-start-column="99" selection-end-line="141" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -754,6 +688,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/utilities/validator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -761,10 +702,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/main.js">
+    <entry file="file://$PROJECT_DIR$/src/App.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/pearls/scroll/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pearls/account/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pearls/visit/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pearls/loading/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/addvisit/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/addstoredprocedure/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/detail/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/editingstoredprocedure/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>

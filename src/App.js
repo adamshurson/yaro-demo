@@ -17,16 +17,16 @@ class App extends Component {
         };
     }
     componentDidMount() {
+        // after loading, hide the loading screen
+        // used set timeout so it's not a flash of the screen
         setTimeout(() => {
             this.LoadingPearl.setState({
                 isLoading: false
             });
         }, 2000);
+        // we need account and loading pearls
         this.AccountPearl = new AccountPearl();
         this.LoadingPearl = new LoadingPearl();
-        this.LoadingPearl.setState({
-            isLoading: true
-        });
         this.AccountPearl.subscribe( (newState) => {
            this.setState({
                account: newState

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-class AddStoredProcedure extends Component {
+// component for adding new visits
+class AddVisit extends Component {
     constructor(props) {
         super(props);
         this.props = props;
@@ -11,6 +12,7 @@ class AddStoredProcedure extends Component {
             stored_procedures: [],
             currentProcedureIndex: 0,
             doctor: 0,
+            // new date in the format yyyy-mm-dd
             date: (new Date()).toISOString().split('T')[0],
             location: {},
             doctors: []
@@ -23,6 +25,7 @@ class AddStoredProcedure extends Component {
         }
     }
     componentDidMount() {
+        // get all doctors so that we can insert them into the select
         axios.get(this.rootUrl + '/doctors/get')
             .then((response) => {
                 if (response.data.success) {
@@ -36,6 +39,7 @@ class AddStoredProcedure extends Component {
             .catch((error) => {
                 console.log("Unexpected error: " + error);
             });
+        // get all stored procedures so we can insert it into the other select
         axios.get(this.rootUrl + '/stored_procedures/get')
             .then((response) => {
                 if (response.data.success) {
@@ -50,6 +54,7 @@ class AddStoredProcedure extends Component {
                 console.log("Unexpected error: " + error);
             });
     }
+    // send visit to our api and return to visits component
     addVisit() {
         const visit = {
             procedures: this.state.procedures,
@@ -58,9 +63,12 @@ class AddStoredProcedure extends Component {
             location: this.state.location,
             user: this.props.user
         };
+        // send the request
         axios.post(this.rootUrl + '/visits/create', visit)
             .then((response) => {
                 if (response.data.success) {
+                    // insert the new visit into our visits component
+                    // then navigate back to our visits
                     this.props.addVisit(response.data.visit);
                 } else {
                     console.log(response.data.err);
@@ -70,6 +78,8 @@ class AddStoredProcedure extends Component {
                 console.log("Unexpected error: " + error);
             });
     }
+    // given our state attribute doctor (which is a doctor id)
+    // return the doctors full profile
     getDoctor() {
         if (this.state.doctor === 0) {
             return { practices: [] };
@@ -77,6 +87,7 @@ class AddStoredProcedure extends Component {
             return this.state.doctors.filter((doc) => doc._id === this.state.doctor)[0];
         }
     }
+    // given a unique location id, set our state attribute location to the full location information
     setLocation(uid) {
         if (this.state.doctor !== 0) {
             const doc = this.getDoctor();
@@ -88,6 +99,7 @@ class AddStoredProcedure extends Component {
             });
         }
     }
+    // add the procedure to our visit
     addProcedure() {
         const procedures = this.state.procedures;
         const template = this.state.stored_procedures[this.state.currentProcedureIndex];
@@ -100,6 +112,7 @@ class AddStoredProcedure extends Component {
             procedures: procedures
         });
     }
+    // set the cost of the procedure given an index
     setCost(index, cost) {
         const procedures = this.state.procedures;
         procedures[index].cost = cost;
@@ -163,4 +176,4 @@ class AddStoredProcedure extends Component {
         );
     }
 }
-export default AddStoredProcedure;
+export default AddVisit;

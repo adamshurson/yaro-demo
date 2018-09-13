@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+// this component is for adding stored procedures
 class AddStoredProcedure extends Component {
     constructor(props) {
         super(props);
@@ -18,10 +19,14 @@ class AddStoredProcedure extends Component {
             this.rootUrl = 'http://167.99.107.141/api/stored_procedures';
         }
     }
+    // simple request to our api, attaching our state object which contains the
+    // information to create the new procedure
     addProcedure() {
         axios.post(this.rootUrl + '/create', this.state)
             .then((response) => {
                 if (response.data.success) {
+                    // this function will append the new procedure to the storedprocedure component
+                    // after that, it will set the page back to storedprocedures
                     this.props.addProcedure(response.data.procedure);
                 } else {
                     console.log(response.data.err);

@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import GoogleMapReact from "google-map-react";
 import VisitPearl from '../../pearls/visit';
 
+// details of a visit
 class Detail extends Component {
     constructor(props) {
         super(props);
         this.props = props;
         this.state = {
             currentProcedure: 0,
+            // need to set the visit subattributes so we don't get reference errors
             visit: {
                 procedures: [],
                 doctor: {
@@ -19,6 +21,9 @@ class Detail extends Component {
         };
     }
     componentDidMount() {
+        // for now, we manage the state with a pearl
+        // i'd like to convert to just using props since the visit is not
+        // variable
         this.VisitPearl = new VisitPearl();
         this.VisitPearl.subscribe((newState) => {
             this.setState({
@@ -26,17 +31,20 @@ class Detail extends Component {
             });
         });
     }
+    // set the current procedure
     setProcedure(index) {
         this.setState({
             currentProcedure: index
         });
     }
+    // render all of the procedure buttons
     renderProcedureItems() {
         return this.state.visit.procedures.map((item, index) => {
            return <button onClick={() => this.setProcedure(index)} key={index} className={(index === this.state.currentProcedure ? "bg-teal text-white" : "text-teal")
                 + " py-1 px-2 rounded border border-teal mr-2 hover:text-white hover:bg-teal focus:outline-none"}>{item.name}</button>
         });
     }
+    // calculate the cost of our visit
     calculateCost(visit) {
         return visit.procedures.reduce((sum, procedure) => sum + procedure.cost, 0);
     }
